@@ -1,11 +1,12 @@
-development:
+common: &common
   adapter: postgresql
   username: postgres
   min_messages: WARNING
+
+development:
+  <<: *common
   database: weather_blitz_development
 
 test:
-  adapter: postgresql
-  username: postgres
-  min_messages: WARNING
+  <<: *common
   database: weather_blitz_test

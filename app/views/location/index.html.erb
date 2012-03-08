@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <script src="jquery-1.7.1.js"></script>
-  <script>
-    jQuery(window).ready(function(){
-      initiate_geolocation();
-    });
+  <head>
+    <script src="jquery-1.7.1.js"></script>
+    <script>
+      jQuery(window).ready(function(){
+        initiate_geolocation();
+      });
 
-    function initiate_geolocation() {
-      navigator.geolocation.getCurrentPosition(handle_geolocation_query);
-    }
+      function initiate_geolocation() {
+        navigator.geolocation.getCurrentPosition(handle_geolocation_query);
+      }
 
-    function handle_geolocation_query(position){
-      window.location = "/?lat=" + position.coords.latitude
-                      + "&lon=" + position.coords.longitude;
-//      alert('Lat: ' + position.coords.latitude + '\n' +
-//          'Lon: ' + position.coords.longitude + '\n' +
-//          'Accuracy(m): ' + position.coords.accuracy);
-    }
-  </script>
-</head>
-<body>
-</body>
+      function handle_geolocation_query(position){
+        window.location = "/?lat=" + position.coords.latitude
+                        + "&lon=" + position.coords.longitude;
+  //      alert('Lat: ' + position.coords.latitude + '\n' +
+  //          'Lon: ' + position.coords.longitude + '\n' +
+  //          'Accuracy(m): ' + position.coords.accuracy);
+      }
+    </script>
+  </head>
+  <body>
+  </body>
 </html>
